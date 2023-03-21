@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -32,7 +34,7 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
   ],
 
   styleResources: {
@@ -46,13 +48,18 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
   ],
 
   webfontloader: {
     google: {
       families: ['Ubuntu:wght@400,700&display=swap']
     }
+  },
+
+  env: {
+    SERVICE_DOMAIN: process.env.SERVICE_DOMAIN,
+    API_KEY: process.env.API_KEY,
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
