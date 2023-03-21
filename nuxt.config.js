@@ -6,15 +6,15 @@ export default {
   head: {
     title: 'my-resume',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -32,8 +32,13 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/style-resources',
+    '@nuxtjs/style-resources'
   ],
+
+  styleResources: {
+    scss: ['~/assets/scss/app.scss'],
+    hoistUseStatements: true
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -41,21 +46,21 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    'nuxt-webfontloader',
+    'nuxt-webfontloader'
   ],
 
   webfontloader: {
     google: {
-      families: ['Ubuntu:wght@400,700&display=swap'],
-    },
+      families: ['Ubuntu:wght@400,700&display=swap']
+    }
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: '/'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {}
 }
