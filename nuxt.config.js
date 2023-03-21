@@ -41,7 +41,14 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'nuxt-webfontloader',
   ],
+
+  webfontloader: {
+    google: {
+      families: ['Ubuntu:wght@400,700&display=swap'],
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
